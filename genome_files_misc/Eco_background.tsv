@@ -1,0 +1,7 @@
+# 0-order Markov frequencies from file Eco_genome.fasta
+# seqs: 1    min: 4641652    max: 4641652    avg: 4641652.0    sum: 4641652    alph: DNA
+# order 0
+A 2.460e-01
+C 2.540e-01
+G 2.540e-01
+T 2.460e-01

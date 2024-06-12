@@ -1,0 +1,4 @@
+r1,r2,i7,title
+frag_gDNA_3enrich1_S1_R1_001.fastq.gz,frag_gDNA_3enrich1_S1_R2_001.fastq.gz,1,gDNA1
+frag_gDNA_3enrich2_S2_R1_001.fastq.gz,frag_gDNA_3enrich2_S2_R2_001.fastq.gz,2,gDNA2
+frag_gDNA_3enrich3_S3_R1_001.fastq.gz,frag_gDNA_3enrich3_S3_R2_001.fastq.gz,3,gDNA3

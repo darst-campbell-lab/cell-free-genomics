@@ -1,0 +1,7 @@
+# 0-order Markov frequencies from file bsu_genome.fasta
+# seqs: 1    min: 4215606    max: 4215606    avg: 4215606.0    sum: 4215606    alph: DNA
+# order 0
+A 2.824e-01
+C 2.176e-01
+G 2.176e-01
+T 2.824e-01

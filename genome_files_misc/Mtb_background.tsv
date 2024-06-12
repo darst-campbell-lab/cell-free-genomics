@@ -1,0 +1,7 @@
+# 0-order Markov frequencies from file Mtb_genome.fasta
+# seqs: 1    min: 4411710    max: 4411710    avg: 4411710.0    sum: 4411710    alph: RNA
+# order 0
+A 1.719e-01
+C 3.287e-01
+G 3.275e-01
+U 1.719e-01
