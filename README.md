@@ -1,6 +1,6 @@
 # cell-free-genomics
-The Jupyter Notebooks, Python and R scripts in this repo were used to analyze raw fastq data, identify promoters and terminators in the M. tuberculosis genome (i.e. genomic coordinates where transcript ends significantly accumulated), further narrow in on putative TF targets (promoters/terminators that were differentially expressed in the presence of a TF), and generate all subsequent analysis figures.
- 
+The Jupyter Notebooks, Python and R scripts in this repo were used to analyze raw fastq data, identify promoters and terminators in the M. tuberculosis genome (i.e. genomic coordinates where transcript ends significantly accumulated), further narrow in on putative TF targets (promoters/terminators that were differentially expressed in the presence of a TF), and generate all subsequent analysis figures. \n
+ \n
 The core cell-free genomics pipeline relies on the following Jupyter notebooks:
 **CellFreeGenomics_readPreparation**
 General purpose: Prepare and align sequencing reads to reference genomes.   
