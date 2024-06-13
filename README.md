@@ -3,18 +3,18 @@ The Jupyter Notebooks, Python and R scripts in this repo were used to analyze ra
  \n
 The core cell-free genomics pipeline relies on the following Jupyter notebooks:
 **CellFreeGenomics_readPreparation**
-General purpose: Prepare and align sequencing reads to reference genomes.   
-Note: separate de-multiplexing and quality-control pipelines were developed for RNA and genomic DNA samples, since these libraries were prepared differently.
-Pipeline steps include:
-Check fastq quality with fastqc  
-De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)
-UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)
-Paired-end read alignment to concatenated reference genome (E. coli/Eco + M. tuberculosis/Mtb)
-Remove PCR and optical duplicates from alignments using umi_tools
-Generate alignments containing transcript end reads only (read 2)
-2 separate alignments:
-One for spike genome (E. coli)
-One for experimental genome (M. tuberculosis)
+>General purpose: Prepare and align sequencing reads to reference genomes.   
+>Note: separate de-multiplexing and quality-control pipelines were developed for RNA and genomic DNA samples, since these libraries were prepared differently.
+>Pipeline steps include:
+>>Check fastq quality with fastqc  
+>>De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)
+>>UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)
+>>Paired-end read alignment to concatenated reference genome (E. coli/Eco + M. tuberculosis/Mtb)
+>>Remove PCR and optical duplicates from alignments using umi_tools
+>>Generate alignments containing transcript end reads only (read 2)
+>>2 separate alignments:
+>>>One for spike genome (E. coli)
+>>>One for experimental genome (M. tuberculosis)
 
 **CellFreeGenomics_identifyEnrichedEnd**s
 General purpose: Identify TSSs and TTSs in each replicate.
