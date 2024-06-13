@@ -14,9 +14,7 @@ Pipeline steps include:
 * Remove PCR and optical duplicates from alignments using umi_tools
 * Generate alignments containing transcript end reads only (read 2)
 * 2 separate alignments: one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)
-                        <!--  -->
-
-<br>
+<!------>
 ## CellFreeGenomics_identifyEnrichedEnds 
 **General purpose:** Identify TSSs and TTSs in each replicate.\
 Pipeline steps include:
