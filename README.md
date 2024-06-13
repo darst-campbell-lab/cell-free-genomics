@@ -23,7 +23,7 @@ Pipeline steps include:
 * Generate bigWig files (separate + and – strand files) as inputs for the nonparametric resampling script
 * Call TSSs and TTSs using a nonparametric resampling approach at every position in the genome (developed by Mike Wolfe, PhD). This requires that the NETseq_pause_calling.py script, with dependencies arraytools.py & bwtools.py, is in the working directory.
 * Generate consensus TSS/TTS calls for the Eco spike alignments (i.e. TSSs or TTSs found in all three replicates of a given condition)
-<br>
+<!------>
 ## CellFreeGenomics_thresholdSelection
 **General purpose:** Identify putative transcription factor targets (promoters or terminators) and de novo motifs.\
 There are two possible pipelines, depending on the experimental design.
