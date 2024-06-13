@@ -6,24 +6,23 @@ The core cell-free genomics pipeline relies on the following Jupyter notebooks:\
 ## CellFreeGenomics_readPreparation \
 General purpose: Prepare and align sequencing reads to reference genomes.   \
 Note: separate de-multiplexing and quality-control pipelines were developed for RNA and genomic DNA samples, since these libraries were prepared differently.\
-Pipeline steps include:
->Check fastq quality with fastqc  \
->De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)\
->UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)\
->Paired-end read alignment to concatenated reference genome (E. coli/Eco + M. tuberculosis/Mtb)\
->Remove PCR and optical duplicates from alignments using umi_tools\
->Generate alignments containing transcript end reads only (read 2)\
->2 separate alignments:
->>One for spike genome (E. coli) & one for experimental genome (M. tuberculosis)\
+Pipeline steps include:\
+Check fastq quality with fastqc  \
+De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)\
+UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)\
+Paired-end read alignment to concatenated reference genome (E. coli/Eco + M. tuberculosis/Mtb)\
+Remove PCR and optical duplicates from alignments using umi_tools\
+Generate alignments containing transcript end reads only (read 2)\
+2 separate alignments: one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)\
 <br>
 ## CellFreeGenomics_identifyEnrichedEnds \
 General purpose: Identify TSSs and TTSs in each replicate.\
-Pipeline steps include:
-  >Downsample the Eco and Mtb alignments containing only transcript end reads to equivalent sequencing depths
-  >Generate single-bp resolution .txt files, containing both transcript end read counts only and total coverage counts at every genomic position (important for later steps)
-  >Generate bigWig files (separate + and – strand files) as inputs for the nonparametric resampling script
-  >Call TSSs and TTSs using a nonparametric resampling approach at every position in the genome (developed by Mike Wolfe, PhD). This requires that the NETseq_pause_calling.py script, with dependencies arraytools.py & bwtools.py, is in the working directory.
-> Generate consensus TSS/TTS calls for the Eco spike alignments (i.e. TSSs or TTSs found in all three replicates of a given condition)\
+Pipeline steps include:\
+  Downsample the Eco and Mtb alignments containing only transcript end reads to equivalent sequencing depths\
+  Generate single-bp resolution .txt files, containing both transcript end read counts only and total coverage counts at every genomic position (important for later steps)\
+  Generate bigWig files (separate + and – strand files) as inputs for the nonparametric resampling script\
+  Call TSSs and TTSs using a nonparametric resampling approach at every position in the genome (developed by Mike Wolfe, PhD). This requires that the NETseq_pause_calling.py script, with dependencies arraytools.py & bwtools.py, is in the working directory.\
+ Generate consensus TSS/TTS calls for the Eco spike alignments (i.e. TSSs or TTSs found in all three replicates of a given condition)\
 <br>
 ## CellFreeGenomics_thresholdSelection
 General purpose: Identify putative transcription factor targets (promoters or terminators) and de novo motifs.
