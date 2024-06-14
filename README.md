@@ -6,6 +6,11 @@ The core cell-free genomics pipeline relies on the following Jupyter notebooks:\
 ## CellFreeGenomics_readPreparation 
 **General purpose:** Prepare and align sequencing reads to reference genomes.   \
 *Note:* separate de-multiplexing and quality-control pipelines were developed for RNA and genomic DNA samples, since these libraries were prepared differently.\
+<br>
+Requires raw fastq files (post-i7 de-multiplex) in the sample preparation directory (e.g. `5enrich_CRP/readPrep/raw_fastq`, `3enrich_NusAG/readPrep/raw_fastq`). \
+Also requires .csv files to map each replicate back to its respective i7 and inline barcodes in the `input_csv_files` directory.\
+Upon running the pipeline, the necessary output directories will be generated in `readPrep`.
+<br>
 Pipeline steps include:
 * Check fastq quality with fastqc  
 * De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)
@@ -17,6 +22,8 @@ Pipeline steps include:
 <!------>
 ## CellFreeGenomics_identifyEnrichedEnds 
 **General purpose:** Identify TSSs and TTSs in each replicate.\
+Upon running the pipeline, the necessary output directories will be generated in `identifyEnrichedEnds`.
+<br>
 Pipeline steps include:
 * Downsample the Eco and Mtb alignments containing only transcript end reads to equivalent sequencing depths
 * Generate single-bp resolution .txt files, containing both transcript end read counts only and total coverage counts at every genomic position (important for later steps)
@@ -26,6 +33,8 @@ Pipeline steps include:
 <!------>
 ## CellFreeGenomics_thresholdSelection
 **General purpose:** Identify putative transcription factor targets (promoters or terminators) and de novo motifs.\
+Upon running the pipeline, the necessary output directories will be generated in `selectThreshold`. 
+<br>
 There are two possible pipelines, depending on the experimental design.
 <br>
 * Pairwise (+/– TF): the main function is `cpmThreshold_motifRecovery_pairwise`. This function iterates through a range of user-provided CPM thresholds to compare motif discovery and number    of differentially-expressed TSSs/TTSs identified at each threshold. Specifically, at each CPM threshold, the function:
