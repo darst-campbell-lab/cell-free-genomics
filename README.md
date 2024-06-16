@@ -1,5 +1,5 @@
 # cell-free-genomics
-The Jupyter Notebooks, Python and R scripts in this repo were used to analyze raw fastq data, identify promoters and terminators in the M. tuberculosis genome (i.e. genomic coordinates where transcript ends significantly accumulated), further narrow in on putative TF targets (promoters/terminators that were differentially expressed in the presence of a TF), and generate all subsequent analysis figures. \
+The Jupyter Notebooks, Python and R scripts in this repo were used to analyze raw fastq data, identify promoters and terminators in the *M. tuberculosis* (Mtb) genome (i.e. genomic coordinates where transcript ends significantly accumulated), further narrow in on putative TF targets (promoters/terminators that were differentially expressed in the presence of a TF), and generate all subsequent analysis figures. \
 <br>
 The core cell-free genomics pipeline relies on the following Jupyter notebooks:\
 <br>
@@ -15,7 +15,7 @@ Pipeline steps include:
 * Check fastq quality with fastqc  
 * De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)
 * UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)
-* Paired-end read alignment to concatenated reference genome (E. coli/Eco + M. tuberculosis/Mtb)
+* Paired-end read alignment to concatenated reference genome (*E. coli*/Eco + Mtb)
 * Remove PCR and optical duplicates from alignments using umi_tools
 * Generate alignments containing transcript end reads only (read 2)
 * 2 separate alignments: one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)
