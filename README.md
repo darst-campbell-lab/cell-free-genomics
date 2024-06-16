@@ -50,10 +50,10 @@ There are two possible pipelines, depending on the experimental design.
     * Performs de novo motif analysis on putative TF targets
       * XSTREME: MEME/STREME for discovery, SEA for enrichment, FIMO for scanning
 <br>
-* Multifactor (two or more TFs): the main function is `cpmThreshold_multifactor`. A similar procedure is performed as described above to calculate numbers of differentially expressed           TSSs/TTSs at certain thresholds, except that no motif discovery is performed because this is best analyzed using a pairwise design.
+* Multifactor (two or more TFs): use the `cpmThreshold_multifactor` function. A similar procedure is performed as described above to calculate numbers of differentially expressed TSSs/TTSs at certain thresholds, except that no motif discovery is performed (requires a pairwise design).
 
 Results from each CPM threshold tested are compiled in a .csv file using the `compile_results` function. \
 <br>
-If relevant (i.e. a de novo motif is discovered), DESeq2 results can be integrated with FIMO motif scanning results using the `integrate_DESeq2_motif` function.
+If relevant (i.e. a *de novo* motif is discovered), DESeq2 results can be integrated with FIMO motif scanning results using the `integrate_DESeq2_motif` function.
 
 
