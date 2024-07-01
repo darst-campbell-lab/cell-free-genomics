@@ -32,7 +32,7 @@ Pipeline steps include:
 * Generate consensus TSS/TTS calls for the Eco spike alignments (i.e. TSSs or TTSs found in all three replicates of a given condition)
 <!------>
 ## CellFreeGenomics_thresholdSelection
-**General purpose:** Identify putative transcription factor targets (promoters or terminators) and de novo motifs.\
+**General purpose:** Identify putative transcription factor targets (promoters or terminators) and *de novo* motifs.\
 Upon running the pipeline, the necessary output directories will be generated in `selectThreshold`. 
 <br>
 There are two possible pipelines, depending on the experimental design.
