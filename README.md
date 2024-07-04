@@ -53,7 +53,8 @@ There are two possible pipelines, depending on the experimental design.
 
 * Multifactor (two or more TFs): use the `cpmThreshold_multifactor` function. A similar procedure is performed as described above to calculate numbers of differentially expressed TSSs/TTSs at certain thresholds, except that no motif discovery is performed (requires a pairwise design).
 <br>
-Results from each CPM threshold tested are compiled in a .csv file using the `compile_results` function. \
+Results from each CPM threshold tested are compiled in a .csv file using the `compile_results` function.
+<br>
 <br>
 If relevant (i.e. a *de novo* motif is discovered), DESeq2 results can be integrated with FIMO motif scanning results using the `integrate_DESeq2_motif` function.
 
