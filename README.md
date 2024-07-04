@@ -17,8 +17,7 @@ Pipeline steps include:
 * UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)
 * Paired-end read alignment to concatenated reference genome (*E. coli*/Eco + Mtb)
 * Remove PCR and optical duplicates from alignments using the `dedup` function from `umi_tools`
-* Generate alignments containing transcript end reads only (read 2)
-* 2 separate alignments: one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)
+* Generate 2 separate alignments containing transcript end reads only (read 2): one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)
 <!------>
 ## CellFreeGenomics_identifyEnrichedEnds 
 **General purpose:** Identify TSSs and TTSs in each replicate.\
