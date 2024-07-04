@@ -16,7 +16,7 @@ Pipeline steps include:
 * De-multiplex fastq files based on inline barcode sequence (code written by Peter Culviner, PhD)
 * UMI removal from read sequence and addition to read ID (necessary for subsequent read de-duplication)
 * Paired-end read alignment to concatenated reference genome (*E. coli*/Eco + Mtb)
-* Remove PCR and optical duplicates from alignments using umi_tools
+* Remove PCR and optical duplicates from alignments using the `dedup` function from `umi_tools`
 * Generate alignments containing transcript end reads only (read 2)
 * 2 separate alignments: one for spike genome (E. coli) & one for experimental genome (M. tuberculosis)
 <!------>
