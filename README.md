@@ -52,7 +52,7 @@ There are two possible pipelines, depending on the experimental design.
       * XSTREME: MEME/STREME for discovery, SEA for enrichment, FIMO for scanning
 
 * Multifactor (two or more TFs): use the `cpmThreshold_multifactor` function. A similar procedure is performed as described above to calculate numbers of differentially expressed TSSs/TTSs at certain thresholds, except that no motif discovery is performed (requires a pairwise design).
-<br>
+
 Results from each CPM threshold tested are compiled in a .csv file using the `compile_results` function.
 <br>
 <br>
